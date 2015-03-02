@@ -70,8 +70,8 @@
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 
 ;; Use shell-like backspace C-h, rebind help to F1
-(define-key key-translation-map [?\C-h] [?\C-?])
-(global-set-key (kbd "<f1>") 'help-command)
+;;(define-key key-translation-map [?\C-h] [?\C-?])
+;;(global-set-key (kbd "<f1>") 'help-command)
 
 (global-set-key (kbd "M-h") 'kill-region-or-backward-word)
 
@@ -309,6 +309,9 @@
 (global-set-key (kbd "M-s f") 'find-name-dired)
 
 ;; Find file in project
+(global-set-key (kbd "C-x i") 'find-file-in-project)
+
+;; Switch to other buffer
 (global-set-key (kbd "C-x o") 'find-file-in-project)
 
 ;; Find file in project, with specific patterns
