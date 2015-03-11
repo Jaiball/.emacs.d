@@ -30,7 +30,15 @@
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
 
 ;; HTML
-(add-to-list 'auto-mode-alist '("\\.html\\'" . crappy-jsp-mode))
+(setq web-mode-enable-current-element-highlight t)
+(setq web-mode-enable-current-column-highlight t)
+(setq web-mode-ac-sources-alist
+      '(("css" . (ac-source-words-in-buffer ac-source-css-property))
+        ("html" . (ac-source-words-in-buffer ac-source-abbrev))
+        ("php" . (ac-source-words-in-buffer
+                  ac-source-words-in-same-mode-buffers
+                  ac-source-dictionary))))
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tag$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.vm$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
