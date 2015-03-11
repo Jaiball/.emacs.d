@@ -26,13 +26,14 @@
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
 (global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
+(global-set-key (kbd "C-S-c C-m") 'mc/mark-all-like-this)
 
 ;; Mark additional regions matching current region
-(global-set-key (kbd "M-æ") 'mc/mark-all-dwim)
-(global-set-key (kbd "C-å") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-æ") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-Æ") 'mc/mark-more-like-this-extended)
-(global-set-key (kbd "M-å") 'mc/mark-all-in-region)
+(global-set-key (kbd "M-@") 'mc/mark-all-dwim)
+(global-set-key (kbd "C->") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-?") 'mc/mark-more-like-this-extended)
+(global-set-key (kbd "M-+") 'mc/mark-all-in-region)
 
 ;; Symbol and word specific mark-more
 (global-set-key (kbd "s-æ") 'mc/mark-next-word-like-this)
@@ -56,7 +57,7 @@
 (global-set-key (kbd "C-x r t") 'inline-string-rectangle)
 
 ;; Quickly jump in document with ace-jump-mode
-(define-key global-map (kbd "C-ø") 'ace-jump-mode)
+(define-key global-map (kbd "C-/") 'ace-jump-mode)
 
 ;; Perform general cleanup.
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
@@ -103,6 +104,7 @@
 
 ;; Use M-w for copy-line if no active region
 (global-set-key (kbd "M-w") 'save-region-or-current-line)
+
 (global-set-key (kbd "s-w") 'save-region-or-current-line)
 (global-set-key (kbd "M-W") (λ (save-region-or-current-line 1)))
 
