@@ -54,6 +54,7 @@
         hippie-expand-no-case-fold
         html-paragraph
         html-wrap-in-tag
+        ido-complete
         insert-postfix-whitespace
         js2-beginning-of-line
         js2-end-of-line
@@ -68,6 +69,7 @@
         kill-and-retry-line
         kill-region-or-backward-word
         kill-sexp
+        kill-visual-line
         live-cycle-clj-coll
         magit-stage-item
         markdown-enter-key
@@ -152,6 +154,7 @@
         tagedit-maybe-insert-slash
         tagedit-raise-tag
         tagedit-splice-tag
+        tags-loop-continue
         tern-ac-dot-complete
         toggle-assert-refute
         toggle-quotes
@@ -171,6 +174,7 @@
 (setq mc/cmds-to-run-once
       '(
         adv-insert-new-number
+        backward-sentence
         beginning-of-buffer
         cider-eval-ns-form
         cleanup-buffer
@@ -189,8 +193,10 @@
         kill-this-buffer
         kmacro-end-or-call-macro
         magit-status
+        markdown-exdent-or-delete
         mc/add-cursor-on-click
         mc/add-cursors-to-all-matches
+        mouse-drag-vertical-line
         multiple-cursors-mode
         ns-prev-frame
         persp-switch
