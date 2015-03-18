@@ -42,7 +42,9 @@
 (add-to-list 'auto-mode-alist '("\\.tag$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.vm$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
-
+;;(add-to-list 'auto-mode-alist '("\\.php$" . my-setup-php))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode))
 ;; JSP
 (autoload 'crappy-jsp-mode "crappy-jsp-mode")
 (add-to-list 'auto-mode-alist '("\\.jsp$" . crappy-jsp-mode))
@@ -109,7 +111,7 @@
 
 ;; org-mode
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 ;; Apache config
 (autoload 'apache-mode "apache-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.htaccess\\'"   . apache-mode))
