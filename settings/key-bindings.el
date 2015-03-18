@@ -1,3 +1,7 @@
+;; org mode key bindings, surprised they weren't here already
+(global-set-key (kbd "\C-cl")  'org-store-link)
+(global-set-key (kbd "\C-ca") 'org-agenda)
+
 ;; I don't need to kill emacs that easily
 ;; the mnemonic is C-x REALLY QUIT
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
@@ -57,7 +61,7 @@
 (global-set-key (kbd "C-x r t") 'inline-string-rectangle)
 
 ;; Quickly jump in document with ace-jump-mode
-(define-key global-map (kbd "C-/") 'ace-jump-mode)
+(define-key global-map (kbd "C-'") 'ace-jump-mode)
 
 ;; Perform general cleanup.
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
@@ -233,7 +237,7 @@
 (define-key isearch-mode-map (kbd "C-o") 'isearch-yank-selection)
 
 ;; Comment/uncomment block
-(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-c ;") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-c u") 'uncomment-region)
 
 ;; Eval buffer
@@ -347,5 +351,6 @@
 (define-key occur-mode-map (kbd "v") 'occur-mode-display-occurrence)
 (define-key occur-mode-map (kbd "n") 'next-line)
 (define-key occur-mode-map (kbd "p") 'previous-line)
+
 
 (provide 'key-bindings)
